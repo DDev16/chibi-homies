@@ -1,0 +1,170 @@
+:root {
+	--duration: 15s;
+}
+
+
+
+.wrapper-images1 {
+	display: flex;
+	flex-direction: column;
+	height: 50vh;
+	justify-content: center;
+	left: 50%;
+	position: absolute;
+	top: 100vh;
+	opacity: 0.8;
+	transform: translate3d(-50%, -50%, 0) perspective(800px) rotatey(0deg)
+		rotateX(-10deg);
+}
+.images-line1 {
+	animation: runner var(--duration) linear infinite;
+	display: flex;
+	transform: translateX(23%);
+	&:nth-child(even) {
+		animation-duration: calc(var(--duration) * 1.5);
+	}
+	.line1 {
+		background-position: 50% 50%;
+		background-size: cover;
+		flex: none;
+		height: 29vh;
+		margin: clamp(10px, 2vw, 20px);
+		width: 20vh;
+		position: relative;
+		transition: ease-in-out all 0.3s;
+		border-radius: 1rem;
+		.img1 {
+			position: absolute;
+			z-index: 2;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-position: 50% 50%;
+			background-size: cover;
+			transition: ease-in-out all 0.3s;
+			overflow: hidden;
+			border-radius: 1rem;
+		}
+		&:hover {
+			.img1 {
+				cursor: pointer;
+				transform: scale(1.1) translatez(0px);
+			}
+			&:after {
+				filter: blur(35px) opacity(0.8);
+			}
+		}
+		&:after {
+			content: "";
+			background: inherit;
+			display: block;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			top: 3vh;
+			position: absolute;
+			background-size: cover;
+			z-index: -1;
+			transition: ease-in-out all 0.3s;
+			filter: blur(25px) opacity(0.8);
+		}
+	}
+}
+
+@keyframes runner {
+	to {
+		transform: translateX(-10.4%);
+	}
+}
+
+/*Dev*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
+.dev {
+	font-family: "Poppins", sans-serif;
+	position: fixed;
+	font-size: clamp(8px, 3vw, 14px);
+	bottom: 1vw;
+	left: 1vw;
+	padding: 1em;
+	color: #302b2b;
+	background-color: white;
+	border-radius: 25px;
+	cursor: pointer;
+	z-index: 100;
+	a {
+		text-decoration: none;
+		font-weight: bold;
+		color: #111;
+		transition: ease all 0.3s;
+		&:hover {
+			color: #ef5350;
+			text-decoration: underline;
+		}
+	}
+	span {
+		display: inline-block;
+		transition: ease all 0.3s;
+		color: #ef5350;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+}
+
+
+.chib-image {
+	background-image: url('../../assets/chib (1).png'); // Adjust the path as needed
+	/* Add other CSS properties as needed */
+  }
+  
+  .chib-image2 {
+	background-image: url('../../assets/chib (8).png'); // Adjust the path as needed
+	/* Add other CSS properties as needed */
+  }
+  
+  .chib-image3 {
+	background-image: url('../../assets/chib (6).png'); // Adjust the path as needed
+	/* Add other CSS properties as needed */
+  }
+  .chib-image4 {
+	background-image: url('../../assets/chib (10).png'); // Adjust the path as needed
+	/* Add other CSS properties as needed */
+  }
+
+  .chib-image5 {
+	background-image: url('../../assets/chib (9).png'); // Adjust the path as needed
+	/* Add other CSS properties as needed */
+  }
+
+  .chib-image6 {
+	background-image: url('../../assets/chib (2).png'); // Adjust the path as needed
+	/* Add other CSS properties as needed */
+  }
+
+  .chib-image7 {
+	background-image: url('../../assets/chib (4).png'); // Adjust the path as needed
+	/* Add other CSS properties as needed */
+  }
+
+  .chib-image8 {
+	background-image: url('../../assets/chib (1).png'); // Adjust the path as needed
+	/* Add other CSS properties as needed */
+  }
+
+  .chib-image9 {
+	background-image: url('../../assets/chib (5).png'); // Adjust the path as needed
+	/* Add other CSS properties as needed */
+  }
+
+
+  .chib-image10 {
+	background-image: url('../../assets/chib (7).png'); // Adjust the path as needed
+	/* Add other CSS properties as needed */
+  }
+
+  .chib-image11 {
+	background-image: url('../../assets/chib (3).png'); // Adjust the path as needed
+	/* Add other CSS properties as needed */
+  }
+

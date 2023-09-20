@@ -1,0 +1,85 @@
+/* App.scss */
+.App {
+	text-align: center;
+	
+  }
+
+  @font-face {
+    font-family: "Blimey Variable";
+    src: url("https://db.onlinewebfonts.com/t/d573c50173f8483a67c0b94b13033396.eot");
+    src: url("https://db.onlinewebfonts.com/t/d573c50173f8483a67c0b94b13033396.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/d573c50173f8483a67c0b94b13033396.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/d573c50173f8483a67c0b94b13033396.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/d573c50173f8483a67c0b94b13033396.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/d573c50173f8483a67c0b94b13033396.svg#Blimey Variable")format("svg");
+}
+  /* Home.css */
+
+.custom-parallax {
+	width: 100%; /* Set the width of the parallax container */
+	height: 600px; /* Set the height of the parallax container */
+  }
+  
+  .parallax-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+  }
+  
+  .custom-image {
+	max-width: 100%; /* Set the maximum width of the image */
+	max-height: 100%; /* Set the maximum height of the image */
+	width: auto; /* Ensure the image retains its aspect ratio */
+	height: auto;
+  }
+  
+
+body {
+	background: #2d2d30;
+	background-image: url('./assets/tech-bg.webp'); /* Replace 'path-to-your-image.jpg' with the actual path to your background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  overflow-x: hidden;
+}
+
+  
+  .App-logo {
+	height: 350px !important;
+	width: 350px !important;
+	margin-left: 700px;
+	animation: App-logo-spin infinite 20s linear;
+  }
+  
+  @keyframes App-logo-spin {
+	from {
+	  transform: rotatey(0deg);
+	}
+	to {
+	  transform: rotatey(360deg);
+	}
+  }
+  
+  menu {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 20px 0;
+  }
+  
+  menu li {
+	margin: 0 20px;
+	font-size: 18px;
+  }
+  
+  menu li:hover {
+	color: #FF5733; /* Change color on hover */
+	transition: color 0.3s ease-in-out;
+  }
+
+.carosoule {
+	top:250;
+	height: 100%;
+}

@@ -1,0 +1,147 @@
+/* App Navigation Container */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+  }
+  
+/* App Navigation Container */
+.app-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333; /* Background color */
+    padding: 10px 20px;
+    box-shadow: 0 0 50px rgb(247, 243, 243), 0 0 10px rgb(255, 255, 255); /* White shadow added */
+    right: 0;
+  }
+  
+  /* Connect Button Container Styles */
+  .connect-button {
+    list-style: none; /* Remove the list bullet */
+    margin-top: 0;
+
+  }
+  
+  /* Connect Wallet Button Styles */
+  .connect-wallet-button {
+    background-color: #3498db; /* Background color */
+    color: #ffffff; /* Text color */
+    border: none; /* Remove the button border */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    position: absolute;
+    right: 30px; /* Adjust the position as needed */
+    margin-bottom: 0;
+  
+    /* Hover effect for the button */
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect for the Connect Wallet button */
+  .connect-wallet-button:hover {
+    background-color: #2980b9; /* Darker background color on hover */
+  }
+  
+  /* Logo Styling */
+  .app-logo img {
+    height: 250px; /* Adjust the logo height for mobile */
+    width: auto; /* Allow the logo's width to scale proportionally */
+    animation: App-logo-spin infinite 20s linear;
+    z-index: 1; /* Ensure the logo is on top */
+    
+  }
+  
+  /* Navigation List */
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow navigation items to wrap on smaller screens */
+    justify-content: center;
+     /* Center align navigation items on mobile */
+  }
+  
+  /* Navigation Item */
+  .nav-item {
+    margin: 10px; /* Adjust spacing between navigation items on mobile */
+  }
+  
+  /* Stylish Link Styles */
+  .nav-item a {
+    text-decoration: none;
+    color: #fff; /* Text color for normal state */
+    font-weight: bold; /* Font weight for emphasis */
+    transition: color 0.5s; /* Smooth color transition on hover */
+    text-shadow: 0 0 35px #000000; /* Glowing shadow with the same color */
+
+
+  }
+  .nav-item a {
+    font-size: 80px; /* Adjust the font size as needed */
+    padding: 10px 20px; /* Adjust the padding as needed */
+
+  }
+  
+  /* Link Hover State */
+  /* Link Hover State */
+.nav-item a:hover {
+    color: #d3ff33; /* Text color on hover */
+    text-shadow: 0 0 35px #d3ff33; /* Glowing shadow with the same color */
+  }
+  
+  
+  /* Media Query for Mobile Devices */
+  @media screen and (max-width: 768px) {
+    .app-navigation {
+      flex-direction: column; /* Stack elements vertically on mobile */
+      text-align: center; /* Center-align all content on mobile */
+    }
+  }
+  
+
+  //easter css
+
+  /* EasterEgg.scss */
+.app-logo.easter-egg-found {
+    animation: spin 2s linear infinite, fadeIn 1s ease-in;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .easter-egg-message {
+    position: relative;
+    top: 50px;
+    right: 670px;
+    background-color: #d3ff33;
+    color: #0a0707;
+    padding: 10px;
+    border-radius: 20px;
+    display: none;
+    font-size: 42px;
+    animation: fadeIn 2s ease-in;
+  }
+  
+  .app-logo.easter-egg-found ~ .easter-egg-message {
+    display: block;
+  }
+  
+  
