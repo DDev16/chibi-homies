@@ -18,11 +18,11 @@ import ParallaxContainer from '../parallax/parallaxhero';
 function Home() {
   return (
     <div className='Home'>
-      {/* <Carasoule /> */}
+      <Carasoule />
       <ParallaxContainer />
 
 
-      {/* <Parallax
+      <Parallax
         strength={450}
         // bgImage={parallaxBackground}
         className="custom-parallax"
@@ -40,7 +40,7 @@ function Home() {
             
           </div>
         </div> 
-      </Parallax> */}
+      </Parallax>
 
       <Parallax strength={800} bgImage={parallaxImage}>
         <About />
