@@ -7,7 +7,7 @@ import Footer1 from '../../components/footer/Footer';
 import Web3DApps from '../dapps/web3dapps';
 import About from '../about/about';
 import "./Home.scss"
-import parallaxImage from '../../assets/zyro-image (1).png';
+import parallaxImage from '../../assets/test.png';
 import parallaxBackground from '../../assets/friends.png';
 import "../home/Home.scss"
 import Roadmap from '../roadmap/roadmap';
@@ -18,11 +18,12 @@ import ParallaxContainer from '../parallax/parallaxhero';
 function Home() {
   return (
     <div className='Home'>
-      {/* <Carasoule /> */}
+  
+      <Carasoule />
       <ParallaxContainer />
 
 
-      {/* <Parallax
+      <Parallax
         strength={450}
         // bgImage={parallaxBackground}
         className="custom-parallax"
@@ -40,7 +41,7 @@ function Home() {
             
           </div>
         </div> 
-      </Parallax> */}
+      </Parallax>
 
       <Parallax strength={800} bgImage={parallaxImage}>
         <About />
