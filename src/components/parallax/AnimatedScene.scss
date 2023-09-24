@@ -1,0 +1,103 @@
+/* AnimatedScene.scss */
+
+.parallax-container {
+  position: relative;
+  width: 100%;
+  height: 210vh; /* Adjust the minimum height as needed */
+  overflow: hidden;
+  margin-bottom: 0;
+
+}
+.nav {
+  position: absolute;
+  z-index: 99;
+
+}
+
+.welcome-message {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 99;
+}
+
+.welcome-message h1 {
+  font-size: 4rem; /* Adjust the font size for mobile */
+  color: #ffffff; /* Text color */
+  background-color: rgba(0, 0, 0, 0.5); /* Background color with transparency */
+  padding: 1rem; /* Padding around the text */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.parallax-layer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Adjust the margin-top for mobile responsiveness */
+.bottom-layer {
+  background-image: url('../../assets/bottom.png');
+  z-index: 5;
+  margin-top: 0vh; /* Adjust as needed for mobile */
+}
+
+.clouds1-layer {
+  background-image: url('../../assets/clouds1.png');
+  z-index: 4;
+  margin-top: 10vh; /* Adjust as needed for mobile */
+}
+
+.clouds2-layer {
+  background-image: url('../../assets/clouds2.png');
+  z-index: 3;
+  margin-top: 20vh; /* Adjust as needed for mobile */
+}
+
+.clouds3-layer {
+  background-image: url('../../assets/clouds3.png');
+  z-index: 1;
+  margin-top: 50vh; /* Adjust as needed for mobile */
+}
+
+.moon-layer {
+  background-image: url('../../assets/moon.png');
+  z-index: 0;
+  margin-top: -10vh; /* Adjust as needed for mobile */
+}
+
+.nightsky-layer {
+  background-image: url('../../assets/bgd.png');
+  z-index: -6;
+  margin-top: 0; /* Adjust as needed for mobile */
+}
+
+.topclouds-layer {
+  background-image: url('../../assets/topclouds.png');
+  z-index: -1;
+  margin-top: 0;
+}
+
+/* Media query for screens with a maximum width of 768px (typical for mobile devices) */
+@media (max-width: 768px) {
+  .welcome-message h1 {
+    font-size: 2rem; /* Adjust the font size for smaller screens */
+  }
+
+  /* Adjust the margin-top for all layers to make them fit better on smaller screens */
+  .bottom-layer,
+  .clouds1-layer,
+  .clouds2-layer,
+  .clouds3-layer,
+  .moon-layer,
+  .nightsky-layer {
+    margin-top: 0;
+    height: 100vh; /* Adjust the minimum height as needed */
+    /* Remove negative margin for smaller screens */
+  }
+}

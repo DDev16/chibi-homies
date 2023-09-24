@@ -1,7 +1,66 @@
 /* Home.css */
 
-
- 
+/* Add general styles for all screen sizes */
+.Home {
+    margin-top: 20px;
+  }
   
-
-
+  /* Style for the container holding the parallax content */
+  .parallax-content {
+    text-align: center; /* Center the content horizontally */
+    height: 600px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the heading inside the parallax content */
+  .parallax-content h1 {
+    font-size: 84px; /* Set your desired font size */
+    color: #333; /* Set your desired text color */
+  }
+  
+  /* Style for the paragraphs inside the parallax content */
+  .parallax-content p {
+    font-size: 16px; /* Set your desired font size */
+    color: #666; /* Set your desired text color */
+    margin-bottom: 10px; /* Adjust the margin as needed */
+  }
+  
+  /* Use media queries to make adjustments for smaller screens (e.g., mobile) */
+  @media screen and (max-width: 768px) {
+    /* Reduce the font size for headings and paragraphs on smaller screens */
+    .parallax-content h1 {
+      font-size: 48px; /* Adjust font size for smaller screens */
+    }
+    
+    .parallax-content p {
+      font-size: 14px; /* Adjust font size for smaller screens */
+      margin-bottom: 8px; /* Adjust margin for smaller screens */
+    }
+    
+    /* Adjust the height of the parallax container for smaller screens */
+    .parallax-content {
+      height: 400px; /* Adjust height for smaller screens */
+    }
+    
+    /* Add any other mobile-specific adjustments here */
+  }
+  
+  /* Home.scss */
+  
+  /* Style for the parallax container */
+  .custom-parallax {
+    /* Set the background image */
+    // background-image: url('../../assets/friends.png'); /* Replace with your image path */
+  
+    /* Ensure the background covers the container */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background fixed within the container */
+    background-position: center;
+    /* Add other container styles if needed */
+    padding: 20px; /* Add padding as desired */
+    border-radius: 8px; /* Add border-radius if desired */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add box shadow if desired */
+  }
+  

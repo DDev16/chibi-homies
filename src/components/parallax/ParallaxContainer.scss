@@ -1,0 +1,80 @@
+/* ParallaxContainer.css */
+
+.parallax-container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+  /* ParallaxContainer.scss */
+
+.parallax-outer-container {
+    position: relative;
+    height: 100vh; /* Adjust this as needed */
+    overflow: hidden;
+  }
+  
+  .parallax-inner-container {
+    position: absolute;
+    width: 100%;
+    min-height: 100%; /* Set a minimum height to enable scrolling */
+   
+  }
+  
+
+  
+  .parallax-layer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .layer1 {
+    /* Layer 1 styles */
+    background-image: url('../../assets/nightsky.jpg');
+    background-size: cover; /* This ensures the image covers the entire container without repeating */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    width: 20%;
+    height: 20%;
+  }
+  
+  .layer2 {
+    /* Layer 2 styles */
+    // background-image: url('../../assets/bottom.jpg');
+    background-size: fill; /* This ensures the image covers the entire container without repeating */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    width: 50%;
+    height: 50%;
+  }
+  
+  .layer3 {
+    /* Layer 3 styles */
+    // background-image: url('../../assets/wow.png');
+  }
+  
+  /* Define styles for other layers (layer4, layer5, layer6) */
+  
+
+//   /* ParallaxContainer.scss */
+
+
+  
+  .parallax-layer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Add other layer styles as needed */
+  }
+  
+  .layer-content {
+    text-align: center;
+    max-width: 100%; /* Adjust as needed */
+    color: #fff; /* Text color */
+    font-size: 64px; /* Adjust font size as needed */
+    /* Add other content styles as needed */
+  }
+  
+  /* Add styles for other layers and content as needed */
+  

@@ -6,10 +6,10 @@ import styles from '../../components/dapps/dapps.modules.scss'; // Import the sc
 const Web3DApps = () => {
   const dApps = [
     {
-      name: 'DApp 1',
+      name: 'Chibi Minting',
       url: 'https://dapp1.example.com',
       image: 'https://source.unsplash.com/featured/?blockchain',
-      description: 'Description for DApp 1 goes here.',
+      description: 'Minting a Chibi, gets you 1 free',
     },
     {
       name: 'DApp 2',
@@ -28,7 +28,7 @@ const Web3DApps = () => {
 
   return (
     <div className="web3container"> {/* Use scoped class name */}
-      <h1 className="dappsh1">Chibi Homies NFT Brand DApps Showcase</h1>
+      <h1 className="dappsh1">Chibi Homies NFT DApps Showcase</h1>
       <ul className="dapp"> {/* Use scoped class name */}
         {dApps.map((dApp, index) => (
           <li key={index}>

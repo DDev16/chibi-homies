@@ -1,18 +1,13 @@
 /* App Navigation Container */
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: auto;
-  }
-  
+
 /* App Navigation Container */
 .app-navigation {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #333; /* Background color */
+    background-color: #33333300; /* Background color */
     padding: 10px 20px;
-    box-shadow: 0 0 50px rgb(247, 243, 243), 0 0 10px rgb(255, 255, 255); /* White shadow added */
+    // box-shadow: 0 0 50px rgb(247, 243, 243), 0 0 10px rgb(255, 255, 255); /* White shadow added */
     right: 0;
   }
   

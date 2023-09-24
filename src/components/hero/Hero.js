@@ -27,7 +27,7 @@ const Hero = () => {
     <div style={heroStyle}>
      
   <div className="content">
-  <h1 style={{ fontFamily: 'Blimey, cursive' }}>Welcome To Chibi Homies</h1>
+  <h1 style={{ fontFamily: 'Blimey, cursive' }}>Welcome To Chibi & Friends</h1>
   <p>scroll down</p>
   <FontAwesomeIcon icon={faChevronDown} className="scroll-icon" />
 </div>

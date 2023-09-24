@@ -1,0 +1,84 @@
+/* Roadmap container */
+.roadmap {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  /* Roadmap title */
+  .roadmap-title {
+    font-size: 94px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Event list container */
+  .roadmap-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Event list */
+  .event-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack events vertically */
+    align-items: center; /* Center events horizontally */
+  }
+
+
+  /* Individual event item */
+  .event {
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove border */
+    margin: 10px 0; /* Add margin between events */
+    text-align: left;
+    max-width: 300px;
+    min-width: 250px;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-50px); /* Initially move events to the left */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    color: #fff; /* Set text color to white for better visibility */
+  }
+  
+  /* Event title */
+  .event-title {
+    font-size: 68px;
+    font-weight: bold;
+    color: #fff; /* Set text color to white for better visibility */
+    margin-bottom: 10px;
+  }
+  
+  /* Event description */
+  .event-description {
+    font-size: 44px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff; /* Set text color to white for better visibility */
+  }
+  
+  /* Event appearing animation */
+  .event-appear {
+    opacity: 1;
+    transform: translateX(0); /* Move events to their original position */
+    transition-delay: 0.2s; /* Add a delay for staggered appearance */
+  }
+  
+
+  /* Background image for events */
+  .event::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/wow.png'); /* Set the background image */
+    background-size: contain; /* Adjust background size */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    border-radius: 8px; /* Rounded corners for the background */
+    opacity: 0.2; /* Adjust background image opacity as needed */
+    z-index: -1; /* Place background behind event content */
+  }
+  
