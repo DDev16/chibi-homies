@@ -12,7 +12,6 @@
     "@testing-library/user-event": "^13.5.0",
     "@thirdweb-dev/react": "^3.15.0",
     "@thirdweb-dev/sdk": "^3.10.61",
-    "3d-react-carousel": "^1.0.0",
     "animate.css": "^4.1.1",
     "bourbon": "^7.3.0",
     "compass": "^0.1.1",
