@@ -8,11 +8,7 @@
   margin-bottom: 0;
 
 }
-.nav {
-  position: absolute;
-  z-index: 99;
 
-}
 
 .welcome-message {
   position: absolute;
@@ -56,7 +52,7 @@
 .clouds2-layer {
   background-image: url('../../assets/clouds2.png');
   z-index: 3;
-  margin-top: 20vh; /* Adjust as needed for mobile */
+  margin-top: 7vh; /* Adjust as needed for mobile */
 }
 
 .clouds3-layer {
@@ -68,7 +64,7 @@
 .moon-layer {
   background-image: url('../../assets/moon.png');
   z-index: 0;
-  margin-top: -10vh; /* Adjust as needed for mobile */
+  margin-top: -20vh; /* Adjust as needed for mobile */
 }
 
 .nightsky-layer {
@@ -90,14 +86,26 @@
   }
 
   /* Adjust the margin-top for all layers to make them fit better on smaller screens */
-  .bottom-layer,
-  .clouds1-layer,
-  .clouds2-layer,
-  .clouds3-layer,
-  .moon-layer,
+  .bottom-layer {
+    width: auto;
+    
+  }
+  .clouds1-layer {
+    width: auto;
+  }
+  .clouds2-layer {
+    width: auto;
+  }
+  .clouds3-layer {
+    width: auto;
+  }
+  .moon-layer {
+    width: auto;
+  }
   .nightsky-layer {
     margin-top: 0;
-    height: 100vh; /* Adjust the minimum height as needed */
+    width: 100vh;
+    height: 900px;
     /* Remove negative margin for smaller screens */
   }
 }

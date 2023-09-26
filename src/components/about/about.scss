@@ -1,32 +1,44 @@
 /* Stylish CSS for the About component */
 
 .about-container {
-    background: rgb(218, 107, 107); /* Adjust the opacity (0.8 in this example) as needed */
-    color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-    margin-top:0vh;
+  background: rgb(241, 119, 119); /* Adjust the opacity (0.8 in this example) as needed */
+  color: #fff;
+  padding: 20px; /* Reduce padding for smaller screens */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto; /* Center the container horizontally */
+}
 
+.about-container h1 {
+  font-size: 42px; /* Reduce font size for smaller screens */
+  margin-bottom: 10px; /* Reduce margin for smaller screens */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-container p {
+  font-size: 18px; /* Reduce font size for smaller screens */
+  line-height: 1.4;
+  margin-bottom: 10px; /* Reduce margin for smaller screens */
+  font-family: sans-serif; /* Correct the typo from 'san-sarif' to 'sans-serif' */
+}
+
+/* Media query for screens smaller than 600px (adjust as needed) */
+@media screen and (max-width: 600px) {
+  .about-container {
+      padding: 10px; /* Further reduce padding for very small screens */
   }
   
-  
   .about-container h1 {
-    font-size: 84px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+      font-size: 36px; /* Adjust font size for very small screens */
+      margin-bottom: 5px; /* Reduce margin for very small screens */
   }
   
   .about-container p {
-    font-size: 26px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    font-family:san-sarif ;
+      font-size: 16px; /* Adjust font size for very small screens */
+      line-height: 1.3;
+      margin-bottom: 5px; /* Reduce margin for very small screens */
   }
-  
-  /* Add more styles as needed to enhance the visual appeal */
-  
+}

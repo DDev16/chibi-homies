@@ -23,7 +23,7 @@ const ParallaxScene = () => {
   return (
     <div className="parallax-container">
     <div className='nav'>
-        <Nav />
+        
     </div>
      <div className="welcome-message">
    

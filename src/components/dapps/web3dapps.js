@@ -1,58 +1,109 @@
-// Web3DApps.js
+import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow, Pagination, Navigation, Parallax } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/parallax';
+import './dapps.modules.scss';
+import chibi1 from '../../assets/chib (1).png';
 
-import React from 'react';
-import styles from '../../components/dapps/dapps.modules.scss'; // Import the scoped CSS module
+const carsData = [
+  {
+    name: 'Car 1',
+    description: 'This is Car 1. Lorem ipsum dolor sit amet.',
+    imageUrl: chibi1,
+    linkUrl: 'https://example.com/car1', // Add your desired URL here
+  },
+  {
+    name: 'Car 2',
+    description: 'This is Car 2. Lorem ipsum dolor sit amet.',
+    imageUrl: chibi1,
+    linkUrl: 'https://example.com/car2', // Add your desired URL here
+  },
+  {
+    name: 'Car 1',
+    description: 'This is Car 1. Lorem ipsum dolor sit amet.',
+    imageUrl: chibi1,
+    linkUrl: 'https://example.com/car1', // Add your desired URL here
+  },
+  {
+    name: 'Car 2',
+    description: 'This is Car 2. Lorem ipsum dolor sit amet.',
+    imageUrl: chibi1,
+    linkUrl: 'https://example.com/car2', // Add your desired URL here
+  },
+  {
+    name: 'Car 1',
+    description: 'This is Car 1. Lorem ipsum dolor sit amet.',
+    imageUrl: chibi1,
+    linkUrl: 'https://example.com/car1', // Add your desired URL here
+  },
+  {
+    name: 'Car 2',
+    description: 'This is Car 2. Lorem ipsum dolor sit amet.',
+    imageUrl: chibi1,
+    linkUrl: 'https://example.com/car2', // Add your desired URL here
+  },
+  // Add more car data entries here
+];
 
-const Web3DApps = () => {
-  const dApps = [
-    {
-      name: 'Chibi Minting',
-      url: 'https://dapp1.example.com',
-      image: 'https://source.unsplash.com/featured/?blockchain',
-      description: 'Minting a Chibi, gets you 1 free',
-    },
-    {
-      name: 'DApp 2',
-      url: 'https://dapp2.example.com',
-      image: 'https://source.unsplash.com/featured/?blockchain',
-      description: 'Description for DApp 2 goes here.',
-    },
-    {
-      name: 'DApp 3',
-      url: 'https://dapp3.example.com',
-      image: 'https://source.unsplash.com/featured/?blockchain',
-      description: 'Description for DApp 3 goes here.',
-    },
-    // Add more DApps as needed
-  ];
+function App() {
+  const [selectedCar, setSelectedCar] = useState(null);
+
+  const handleCarClick = (index) => {
+    const car = carsData[index];
+    window.open(car.linkUrl, '_blank'); // Open the link in a new tab/window
+    setSelectedCar(car);
+  };
 
   return (
-    <div className="web3container"> {/* Use scoped class name */}
-      <h1 className="dappsh1">Chibi Homies NFT DApps Showcase</h1>
-      <ul className="dapp"> {/* Use scoped class name */}
-        {dApps.map((dApp, index) => (
-          <li key={index}>
-            <a
-              href={dApp.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.link}
-            >
-              <div className="dapp-item">
-                <img
-                  src={dApp.image}
-                  alt={`Image for ${dApp.name}`}
-                  className="dapp-image"
-                />
-                <h2 className="dapp-name">{dApp.name}</h2>
-                <p className="dapp-description">{dApp.description}</p>
-              </div>
-            </a>
-          </li>
+    <div className="container">
+      <h1 className="heading">Web3 DApps</h1>
+      <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
+        slidesPerView={5}
+        coverflowEffect={{
+          rotate: 20,
+          stretch: 0,
+          depth: 100,
+          modifier: 3.5,
+        }}
+        pagination={{ el: '.swiper-pagination', clickable: true }}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+          clickable: true,
+        }}
+        modules={[EffectCoverflow, Pagination, Navigation, Parallax]}
+        parallax={true} // Enable the parallax effect for the entire carousel
+        className="swiper_container"
+      >
+        {carsData.map((car, index) => (
+          <SwiperSlide key={index} className="image-slide">
+            <div onClick={() => handleCarClick(index)}>
+              <img
+                src={car.imageUrl}
+                alt={car.name}
+                data-swiper-parallax="-200" // Adjust the parallax value as needed
+              />
+            </div>
+          </SwiperSlide>
         ))}
-      </ul>
+      </Swiper>
+
+      {selectedCar && (
+        <div className="car-details">
+          <h2>{selectedCar.name}</h2>
+          <p>{selectedCar.description}</p>
+        </div>
+      )}
     </div>
   );
-};
+}
 
-export default Web3DApps;
+export default App;

@@ -1,0 +1,58 @@
+/* discord.css */
+
+/* Container for the Discord widget */
+.discord-widget {
+    text-align: center;
+   
+    margin-top: 50px;
+    border-radius: 10px;
+    height: 251vh;
+  }
+  
+  /* Styling for the text */
+  .discord-text {
+    font-size: 104px;
+    color: #fff; /* White text color */
+    margin-bottom: 15px;
+    margin-top: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .easter-egg-active {
+    /* Add styles for the easter egg effect when active */
+    background-color: #e44884; /* Change the background color to something fun */
+    box-shadow: 0 0 20px rgba(226, 68, 129, 0.7); /* Add a colorful shadow */
+    transform: rotate(5deg); /* Rotate the widget slightly */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  /* Styling for the Discord button */
+  .discord-button {
+    text-decoration: none;
+  }
+  
+  .discord-button img {
+    width: 300px;
+margin-top: 50px;  
+  border: none;
+    cursor: pointer;
+    border-radius: 30%;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 0 20px rgba(223, 108, 252, 1); /* Add a colorful shadow */
+
+  }
+
+  .ledge img {
+    transition: transform 0.2s ease-in-out;
+    margin-top: 0px;
+    width: 100%;
+
+  }
+  
+  
+  /* Hover effect for the button */
+  .discord-button img:hover {
+    transform: scale(1.1);
+  }
+  

@@ -1,80 +1,100 @@
-/* dapps.modules.scss */
+/* dapps.module.scss */
 
-/* Define styles for the web3container */
-.web3container {
+/* Overall container styles */
+.container {
   text-align: center;
-  margin: 20px;
-}
+  margin-top: 50px;
+  height: 900px;
 
-/* Define styles for the dappsh1 */
-.dappsh1 {
-  font-size: 5rem; /* Adjust font size as needed */
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #0078d4; /* Change text color to a shade of blue, for example */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow for depth */
-  text-transform: uppercase; /* Convert text to uppercase for emphasis */
-  letter-spacing: 2px; /* Increase letter spacing for readability */
-  line-height: 1.2; /* Adjust line height for better text alignment */
-  text-align: center; /* Center-align the text */
-  /* Add a background color or background gradient for contrast */
-  background: linear-gradient(to right, #0078d4, #00bfff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  // Standard property
-  background-clip: text;
-
-  // Vendor prefixes
-  -webkit-background-clip: text; // For Chrome and Safari 3
-}
-
-/* Define styles for the dapp */
-.dapp {
-  list-style: none;
-  padding: 0;
-  display: grid; /* Use a grid layout for better alignment */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
-  gap: 20px; /* Add spacing between dapp items */
-  justify-content: center;
-}
-
-/* Define styles for the dapp-item */
-.dapp-item {
-  text-align: center;
-  background-color: #fff; /* Background color for dapp items */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(247, 22, 22, 0.1);
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-
-  /* Add hover effect to scale and elevate dapp items */
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-  }
-}
-
-/* Define styles for the dapp-image */
-.dapp-image {
-  max-width: 100%; /* Ensure the image fits within its container */
-  height: auto;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  object-fit: cover; /* Preserve aspect ratio while filling container */
-}
-
-/* Define styles for the link */
-.link {
-  text-decoration: none;
-  color: #007bff;
-  padding: 10px 20px;
-  border: 1px solid #007bff;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
-
-  /* Add hover effect to change background and text color */
-  &:hover {
-    background-color: #007bff;
+  /* Heading styles */
+  .heading {
+    font-size: 84px;
+    margin-bottom: 20px;
     color: #fff;
   }
+
+  /* Swiper container styles */
+  .swiper_container {
+    position: relative;
+    height: 500px;
+    border-radius: 20px;
+
+    /* Individual slide styles */
+    .swiper-slide {
+      text-align: center;
+      height: 420px;
+      border-radius: 20px;
+      position: relative; /* Add position relative for pseudo-element */
+
+      /* Image styles within slides */
+      img {
+        max-width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        border-color: #f7f7f700;
+      }
+
+      /* Image glow effect */
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: inherit; /* Match the background color with the image */
+        opacity: 0.2; /* Adjust the opacity as needed */
+        box-shadow: 0 0 20px rgba(255, 255, 255, 1); /* Adjust the glow effect */
+        border-radius: 30px; /* Adjust the border-radius for a softer glow */
+        z-index: -1; /* Place the pseudo-element behind the image */
+      }
+    }
+
+    /* Slider controller styles */
+    .slider-controller {
+      position: absolute;
+      height: 500px;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      /* Previous and Next buttons styles */
+      .swiper-button-prev,
+      .swiper-button-next {
+        background-color: #fff;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        /* Icon styles within buttons */
+        ion-icon {
+          font-size: 54px;
+        }
+      }
+
+      /* Pagination styles */
+      .swiper-pagination {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+/* dapps.modules.scss */
+
+.car-details {
+  color: white;
+}
+
+
+/* Spacing between image slides */
+.image-slide {
+  margin-right: 50px; /* Adjust the margin to your desired spacing */
 }
