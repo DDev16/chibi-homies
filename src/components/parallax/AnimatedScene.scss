@@ -3,7 +3,7 @@
 .parallax-container {
   position: relative;
   width: 100%;
-  height: 210vh; /* Adjust the minimum height as needed */
+  height: 100vw; /* Adjust the minimum height as needed */
   overflow: hidden;
   margin-bottom: 0;
 
@@ -84,28 +84,38 @@
   .welcome-message h1 {
     font-size: 2rem; /* Adjust the font size for smaller screens */
   }
+  .parallax-container {
+    position: relative;
+    width: 100%;
+    height: 100vw; /* Adjust the minimum height as needed */
+    overflow: hidden;
+    margin-bottom: 0;
+  
+  }
+  
 
   /* Adjust the margin-top for all layers to make them fit better on smaller screens */
   .bottom-layer {
     width: auto;
+height: auto;
     
   }
   .clouds1-layer {
-    width: auto;
+    margin-top: 30vw;
   }
   .clouds2-layer {
-    width: auto;
+    margin-top: 45vw;
   }
   .clouds3-layer {
     width: auto;
+    margin-top: 45vw;
+
   }
   .moon-layer {
     width: auto;
   }
   .nightsky-layer {
-    margin-top: 0;
-    width: 100vh;
-    height: 900px;
+    margin-top: 0px;
     /* Remove negative margin for smaller screens */
   }
 }

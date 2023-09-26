@@ -1,0 +1,50 @@
+/* Minting.scss */
+.minting-container {
+    text-align: center;
+    font-family: blimey, cursive;
+    padding: 20px;
+    background-image: url('../../assets/gumball.png'); /* Specify the path to your background image */
+    background-size: cover; /* Adjust as needed */
+    background-repeat: no-repeat;
+    height: 1500px;
+
+    background-attachment: fixed; /* This keeps the background fixed while scrolling */
+    color: #fff; /* Set text color to be visible on the background */
+  }
+  
+  .minting-title {
+    font-size: 84px;
+    font-weight: bold;
+  }
+  
+  .minting-info {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .minting-input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .minting-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+  
+  .minting-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

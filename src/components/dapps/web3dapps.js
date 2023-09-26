@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation, Parallax } from 'swiper/modules';
 import 'swiper/css';
@@ -8,6 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/parallax';
 import './dapps.modules.scss';
 import chibi1 from '../../assets/chib (1).png';
+
 
 const carsData = [
   {
@@ -49,61 +50,58 @@ const carsData = [
   // Add more car data entries here
 ];
 
-function App() {
-  const [selectedCar, setSelectedCar] = useState(null);
+function Web3DApps() {
+  const [swiper, setSwiper] = useState(null);
+  const swiperContainerRef = useRef(null);
 
-  const handleCarClick = (index) => {
-    const car = carsData[index];
-    window.open(car.linkUrl, '_blank'); // Open the link in a new tab/window
-    setSelectedCar(car);
-  };
+  useEffect(() => {
+    if (swiper) {
+      const handleScroll = (e) => {
+        const delta = e.deltaY;
+
+        if (delta > 0) {
+          swiper.slideNext();
+        } else if (delta < 0) {
+          swiper.slidePrev();
+        }
+      };
+
+      swiperContainerRef.current.addEventListener('wheel', handleScroll);
+
+      return () => {
+        swiperContainerRef.current.removeEventListener('wheel', handleScroll);
+      };
+    }
+  }, [swiper]);
 
   return (
-    <div className="container">
-      <h1 className="heading">Web3 DApps</h1>
-      <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        loop={true}
-        slidesPerView={5}
-        coverflowEffect={{
-          rotate: 20,
-          stretch: 0,
-          depth: 100,
-          modifier: 3.5,
-        }}
-        pagination={{ el: '.swiper-pagination', clickable: true }}
-        navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-          clickable: true,
-        }}
-        modules={[EffectCoverflow, Pagination, Navigation, Parallax]}
-        parallax={true} // Enable the parallax effect for the entire carousel
-        className="swiper_container"
-      >
-        {carsData.map((car, index) => (
-          <SwiperSlide key={index} className="image-slide">
-            <div onClick={() => handleCarClick(index)}>
-              <img
-                src={car.imageUrl}
-                alt={car.name}
-                data-swiper-parallax="-200" // Adjust the parallax value as needed
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
-      {selectedCar && (
-        <div className="car-details">
-          <h2>{selectedCar.name}</h2>
-          <p>{selectedCar.description}</p>
-        </div>
-      )}
+    <div className="web3dapps">
+      <div ref={swiperContainerRef} className="swiper-container">
+        <Swiper
+          onSwiper={setSwiper}
+          modules={[EffectCoverflow, Pagination, Navigation, Parallax]}
+          spaceBetween={50}
+          slidesPerView={3}
+          navigation
+          pagination={{ clickable: true }}
+          parallax={true}
+        >
+          {carsData.map((car, index) => (
+            <SwiperSlide key={index}>
+              <div className="car">
+                <img src={car.imageUrl} alt={car.name} />
+                <h3>{car.name}</h3>
+                <p>{car.description}</p>
+                <a href={car.linkUrl} target="_blank" rel="noopener noreferrer">
+                  Learn More
+                </a>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 }
 
-export default App;
+export default Web3DApps;
