@@ -33,7 +33,7 @@ function Nav() {
           <a href="/gallery">Staking</a>
         </li>
         <li className="nav-item">
-          <a href="/minting">Mints</a>
+          <a href="/minting">Mint</a>
         </li>
       </ul>
 
