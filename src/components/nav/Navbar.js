@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../../assets/zyro-image (1).png';
+import logo from '../../assets/logo.png';
 import Confetti from 'react-confetti';
 import './nav.scss';
 

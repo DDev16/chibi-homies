@@ -5,8 +5,17 @@
   width: 100%;
   height: 100vw; /* Adjust the minimum height as needed */
   overflow: hidden;
-  margin-bottom: 0;
 
+}
+
+
+.welcome-message {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 99;
 }
 
 
@@ -22,27 +31,28 @@
 
 /* Adjust the margin-top for mobile responsiveness */
 .bottom-layer {
-  background-image: url('../../assets/bottom.png');
-  z-index: 5;
+  background-image: url('../../assets/box.png');
+  z-index: 1;
   margin-top: 0vh; /* Adjust as needed for mobile */
 }
 
 .clouds1-layer {
-  background-image: url('../../assets/clouds1.png');
+  background-image: url('../../assets/psycho.png');
   z-index: 4;
   margin-top: 10vh; /* Adjust as needed for mobile */
 }
 
 .clouds2-layer {
-  background-image: url('../../assets/clouds2.png');
+  background-image: url('../../assets/zombie.png');
   z-index: 3;
-  margin-top: 7vh; /* Adjust as needed for mobile */
+  margin-top: 40vh; /* Adjust as needed for mobile */
 }
 
 .clouds3-layer {
   background-image: url('../../assets/clouds3.png');
-  z-index: 1;
-  margin-top: 50vh; /* Adjust as needed for mobile */
+  z-index: 4;
+  position: absolute;
+  margin-top: 180vh; /* Adjust as needed for mobile */
 }
 
 .moon-layer {

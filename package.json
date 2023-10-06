@@ -17,6 +17,7 @@
     "bourbon": "^7.3.0",
     "compass": "^0.1.1",
     "compass-mixins": "^0.12.12",
+    "embla-carousel-react": "^8.0.0-rc14",
     "ethers": "^5.7.2",
     "install": "^0.13.0",
     "npm": "^10.1.0",
@@ -62,6 +63,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "css-loader": "^6.8.1"
   }
 }

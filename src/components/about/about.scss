@@ -9,6 +9,19 @@
   text-align: center;
   max-width: 600px;
   margin: 0 auto; /* Center the container horizontally */
+  margin-right: 50px;
+  margin-top: 40vh;
+  
+}
+.about-image {
+  background: rgba(241, 119, 119, 0); /* Adjust the opacity (0.8 in this example) as needed */
+  color: #fff;
+  padding: 20px; /* Reduce padding for smaller screens */
+  border-radius: 10px;
+  text-align: center;
+ height: 1200px;
+  margin: 0 auto; /* Center the container horizontally */
+  
 }
 
 .about-container h1 {
