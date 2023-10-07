@@ -3,11 +3,12 @@ import '../../App.scss';
 import { Parallax  } from 'react-parallax';
 import Carasoule from '../../components/carosoule/carosoule1.js';
 import Footer1 from '../../components/footer/Footer';
-import Web3DApp  from "../../components/dapps/web3dapps"; // Import the default export Web3DApp
+import Web3DApp  from "../../components/dapps/web3dapps";
 import About from '../about/about';
 import "./Home.scss"
-import parallaxImage from '../../assets/side.png';
-import parallaxBackground from '../../assets/fly.jpeg';
+import parallaxImage1 from '../../assets/1.jpeg';
+import parallaxImage from '../../assets/gem.jpeg';
+import parallaxBackground from '../../assets/brick.jpeg';
 import "../home/Home.scss"
 import Roadmap from '../roadmap/roadmap';
 import ParallaxContainer from '../parallax/parallaxhero';
@@ -24,31 +25,26 @@ function Home() {
     <div className='Home'>
       <Carasoule />
       <NewParallax />
-      {/* <ParallaxContainer /> */}
      
-      {/* <Hero1 /> */}
-
+      {/* Wrap Parallax component in a div with a specific background size */}
+      <Parallax className="parallax-image-container" strength={800} bgImage={parallaxImage}>
+  
+    <About />
+  
+</Parallax>
       
-
-      <Parallax strength={800} bgImage={parallaxImage}>
-        <About />
-      </Parallax>
-      <Parallax strength={900} >
-      <EmblaCarousel slides={slides} />
-
-      </Parallax>
-      <Parallax strength={800} bgImage={parallaxBackground}>
-
-      <Roadmap />
-      
+      <Parallax strength={900}>
+        <EmblaCarousel slides={slides} />
       </Parallax>
       
-      <Parallax className='parallaxImage' strength={400} bgImage={parallaxImage} >
-
-      <DiscordWidget />
+      <Parallax strength={800} bgImage={parallaxImage1}>
+        <Roadmap />
+      </Parallax>
+      
+      <Parallax className='parallaxImage' strength={400} bgImage={parallaxBackground}>
+        <DiscordWidget />
       </Parallax>
      
-
       <Footer1 />
     </div>
   );
