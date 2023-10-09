@@ -20,7 +20,7 @@ function App() {
         <Route path="/" element={<Home />} /> {/* Define routes */}
          <Route path="/gallery" element={<Gallery />} />
         <Route path="/dapps" element={<Web3DApp />} /> 
-        <Route path="/minting" element={<Minting />} /> 
+        {/* <Route path="/minting" element={<Minting />} />  */}
       </Routes>
     </Router>
     
