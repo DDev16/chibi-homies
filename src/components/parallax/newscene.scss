@@ -29,54 +29,55 @@
   background-size: cover;
 }
 
-/* Adjust the margin-top for mobile responsiveness */
 .bottom-layer {
   background-image: url('../../assets/box.png');
+
   z-index: 1;
   margin-top: 0vh; /* Adjust as needed for mobile */
 }
 
 .clouds1-layer {
-  background-image: url('../../assets/psycho.png');
+  background-image: url('../../assets/header.png');
   z-index: 4;
-  margin-top: 10vh; /* Adjust as needed for mobile */
+  margin-top: 0vh; /* Adjust as needed for mobile */
 }
 
 .clouds2-layer {
-  background-image: url('../../assets/zombie.png');
-  z-index: 3;
-  margin-top: 40vh; /* Adjust as needed for mobile */
+  background-image: url('../../assets/nft.png');
+  z-index: 4;
+  margin-top: 120vh; /* Adjust as needed for mobile */
 }
 
-.clouds3-layer {
-  background-image: url('../../assets/clouds3.png');
-  z-index: 4;
-  position: absolute;
-  margin-top: 180vh; /* Adjust as needed for mobile */
-}
+// .clouds3-layer {
+//   background-image: url('../../assets/clouds1.png');
+//   z-index: 2;
+//   position: absolute;
+//   margin-top: 0vh; /* Adjust as needed for mobile */
+// }
 
 .moon-layer {
-  background-image: url('../../assets/moon.png');
-  z-index: 0;
-  margin-top: -20vh; /* Adjust as needed for mobile */
+  // background-image: url('../../assets/by.png');
+  z-index: 6;
+  margin-top: 150vh; /* Adjust as needed for mobile */
+  margin-left: 150vh;
 }
 
 .nightsky-layer {
-  background-image: url('../../assets/bgd.png');
-  z-index: -6;
-  margin-top: 0; /* Adjust as needed for mobile */
+  position: absolute; /* Make the container absolute */
+  top: 0;
+  left: 0;
+  background-image: url('../../assets/clouds2.png');
+  z-index: 2;
+  margin-top: 0vh; /* Adjust as needed for mobile */
+  /* Add any other styles you need for the container */
 }
 
-.topclouds-layer {
-  background-image: url('../../assets/topclouds.png');
-  z-index: -1;
-  margin-top: 0;
-}
+
 
 /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
 @media (max-width: 768px) {
   .welcome-message h1 {
-    font-size: 2rem; /* Adjust the font size for smaller screens */
+    font-size: 3rem; /* Adjust the font size for smaller screens */
   }
   .parallax-container {
     position: relative;
@@ -95,10 +96,10 @@ height: auto;
     
   }
   .clouds1-layer {
-    margin-top: 30vw;
+    margin-top: 0vw;
   }
   .clouds2-layer {
-    margin-top: 45vw;
+    margin-top: 165vw;
   }
   .clouds3-layer {
     width: auto;

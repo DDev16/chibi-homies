@@ -1,9 +1,9 @@
 .embla {
   position: relative;
-  background-color: #f7f7f704;
+
   padding: 20px;
   max-width: 100%;
-  height: 70vh;
+  height: 150vh;
   margin-left: auto;
   margin-right: auto;
 }
@@ -11,6 +11,7 @@
 .embla__viewport {
   width: 100%;
   height: 100%;
+  
 }
 
 .embla__viewport.is-draggable {
@@ -29,22 +30,46 @@
   -khtml-user-select: none;
   -webkit-tap-highlight-color: transparent;
   margin-left: -10px;
+  
 }
 
 .embla__slide {
-  padding-left: 10px;
+  padding-left: 0px;
   min-width: 40%;
   position: relative;
+  box-shadow: 0 20px 120px #007bff;
+  border-radius: 20px;
+
+
 }
+
+
+
+@keyframes textPulse {
+  0% {
+    transform: scale(1); /* Initial scale */
+  }
+  50% {
+    transform: scale(1.1); /* Slight scale-up */
+  }
+  100% {
+    transform: scale(1); /* Back to original scale */
+  }
+}
+
 
 .embla__slide__inner {
   position: relative;
-  height: 590px;
+  height: 950px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   border-radius: 20px;
+
+  box-shadow: 0 0 120px #007bff;
+
+  
   transition: transform 0.3s ease-in-out; // Add a transition for smooth movement
 }
 
@@ -52,6 +77,10 @@
   object-fit: contain;
   width: 100%;
   height: 100%;
+
+
+  box-shadow: 0 0 120px #007bff;
+
 }
 
 .embla__slide__caption {
@@ -117,7 +146,9 @@
   border-radius: 5px; /* Rounded corners */
   cursor: pointer; /* Show a pointer cursor on hover */
   transition: background-color 0.3s ease, color 0.3s ease;
-  margin-top: 40px;
+  margin-top: 80px;
+  width: 150px;
+  height: 50px;
   box-shadow: 0 0 20px #007bff;
   font-family: Blimey;
   animation: pulse 1s infinite; /* Add a pulsating animation on hover */

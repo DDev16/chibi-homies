@@ -6,7 +6,7 @@
    
     margin-top: 50px;
     border-radius: 10px;
-    height: 251vh;
+    height: 151vh;
   }
   
   /* Styling for the text */
@@ -46,7 +46,7 @@ margin-top: 50px;
   .ledge img {
     transition: transform 0.2s ease-in-out;
     margin-top: 0px;
-    width: 100%;
+    width: 60%;
 
   }
   
@@ -55,4 +55,15 @@ margin-top: 50px;
   .discord-button img:hover {
     transform: scale(1.1);
   }
+
+
+  @media (max-width: 768px) {
+
+    .ledge img {
+      transition: transform 0.2s ease-in-out;
+      margin-top: 100px;
+      width: 100%;
+  
+    }
+}
   

@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { PrevButton, NextButton } from "./EmblaCarouselButtons";
 import useEmblaCarousel from "embla-carousel-react";
 import { mediaByIndex } from "../../components/carosoule/media";
 import "../..//components/carosoule/embla.scss";
+import { useSpring, animated, config } from "react-spring";
 
-const PARALLAX_FACTOR = 1.2;
+const PARALLAX_FACTOR = 2.2;
 
 const mediaData = [
   {
@@ -38,7 +39,26 @@ const mediaData = [
   },
 ];
 
+
 const EmblaCarousel = ({ slides }) => {
+  // Create a spring animation for the header rotation
+  const [scrollY, setScrollY] = useState(0);
+   // Create a spring animation for scaling the header
+   const h1Animation = useSpring({
+    transform: `scale(${1 + scrollY * 0.0025})`, // Scale up the header as you scroll
+    config: config.molasses, // You can adjust the animation config as needed
+  });
+
+  // Style for the animated h1 element
+  const h1Style = {
+    fontSize: "2rem", // Adjust the font size
+    color: "white",
+    textAlign: "center",
+    textShadow: "0 0 10px #007bff", 
+    marginBottom:"350px"// Adjust the text shadow
+    // Add any other CSS properties you want to style the h1 element
+  };
+
   const [viewportRef, embla] = useEmblaCarousel({
     loop: false,
     dragFree: true,
@@ -81,6 +101,19 @@ const EmblaCarousel = ({ slides }) => {
     setParallaxValues(styles);
   }, [embla, setParallaxValues]);
 
+  // Attach a scroll listener to track the scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   useEffect(() => {
     if (!embla) return;
     onSelect();
@@ -100,6 +133,15 @@ const EmblaCarousel = ({ slides }) => {
 
   return (
     <div className="embla">
+      <animated.header
+        style={{
+          ...h1Style,
+          ...h1Animation,
+           // Apply the scroll-based animation here
+        }}
+      >
+        Web3 Dapps
+      </animated.header>
       <div className="embla__viewport" ref={viewportRef}>
         <div className="embla__container">
           {slides.map((index) => (
