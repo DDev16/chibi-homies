@@ -25,9 +25,7 @@ const slides = Array.from(Array(SLIDE_COUNT).keys());
 function Home() {
   return (
     <div className='Home'>
-      <Carasoule />
       <NewParallax />
-      {/* Wrap Parallax component in a div with a specific background size */}
       <Parallax className="parallax-image-container" strength={500} bgImage={parallaxBackground}>
   
     <About />
