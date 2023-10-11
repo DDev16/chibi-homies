@@ -43,10 +43,11 @@ function Nav() {
 
       <ul className="nav-list right">
         <li className="nav-item">
-          <a href="/">Market</a>
+          <a href="/market">Market</a>
         </li>
         <li className="nav-item">
-          <a href="/gallery">Web3 Dapps</a>
+          <a href="/dapps
+          ">Web3 Dapps</a>
         </li>
         <li className="nav-item">
           <a href="/shop">Shop</a>
