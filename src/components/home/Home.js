@@ -3,8 +3,10 @@ import '../../App.scss';
 import { Parallax  } from 'react-parallax';
 import Carasoule from '../../components/carosoule/carosoule1.js';
 import Footer1 from '../../components/footer/Footer';
+import Web3DApp  from "../../components/dapps/web3dapps";
 import About from '../about/about';
 import "./Home.scss"
+import parallaxImage3 from '../../assets/canyon.jpeg';
 
 import parallaxImage1 from '../../assets/backdrop.jpeg';
 import parallaxImage from '../../assets/friends.png';
@@ -12,6 +14,7 @@ import parallaxBackground from '../../assets/brick.jpeg';
 import "../home/Home.scss"
 import Roadmap from '../roadmap/roadmap';
 import DiscordWidget from '../discord/discord';
+import Hero1 from '../hero/Hero1';
 import NewParallax from '../parallax/newparallaxhero.js'
 import EmblaCarousel from "../../components/carosoule/EmblaCarsoule.js";
 import Team from '../team/Team';
@@ -22,6 +25,7 @@ const slides = Array.from(Array(SLIDE_COUNT).keys());
 function Home() {
   return (
     <div className='Home'>
+      <Carasoule />
       <NewParallax />
       <Parallax className="parallax-image-container" strength={500} bgImage={parallaxBackground}>
   
