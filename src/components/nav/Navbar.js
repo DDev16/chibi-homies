@@ -46,8 +46,7 @@ function Nav() {
           <a href="/market">Market</a>
         </li>
         <li className="nav-item">
-          <a href="/dapps
-          ">Web3 Dapps</a>
+          <a href="/dapps">Web3 Dapps</a>
         </li>
         <li className="nav-item">
           <a href="/shop">Shop</a>
