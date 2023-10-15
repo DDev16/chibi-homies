@@ -6,7 +6,7 @@ import Footer1 from '../../components/footer/Footer';
 import Web3DApp  from "../../components/dapps/web3dapps";
 import About from '../about/about';
 import "./Home.scss"
-import parallaxImage3 from '../../assets/canyon.jpeg';
+import parallaxImage3 from '../../assets/boxillusion.jpeg';
 
 import parallaxImage1 from '../../assets/backdrop.jpeg';
 import parallaxImage from '../../assets/friends.png';
@@ -44,7 +44,7 @@ function Home() {
       <Parallax className='parallaxImage' strength={400} bgImage={parallaxImage1}>
         <DiscordWidget />
       </Parallax>
-      <Parallax className='parallaxImage' strength={400} bgImage={parallaxImage1}>
+      <Parallax className='parallaxImage' strength={400} bgImage={parallaxImage3}>
         <Team />
       </Parallax>
      

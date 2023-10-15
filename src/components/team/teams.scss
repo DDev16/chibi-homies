@@ -3,7 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 200vh; /* Set a minimum height to fill the viewport */
+    height: 175vh;
+
   }
   
   .team-member {
@@ -26,13 +27,13 @@
     h2 {
       margin-top: 10px;
       font-size: 2.5rem; /* Adjust the font size for mobile screens */
-      color: #333;
+      color: #f3f2f2;
     }
   
     p {
       margin-top: 5px;
       font-size: 1.5rem; /* Adjust the font size for mobile screens */
-      color: #2c2b2b;
+      color: #faf6f6;
       font-family: fantasy;
       text-shadow: 0 0 15px #ffffff;
     }

@@ -35,7 +35,7 @@ const Team = () => {
     color: "white",
     textAlign: "center",
     textShadow: "0 0 2px black",
-    marginBottom: "350px" // Adjust the text shadow
+    marginBottom: "50px" // Adjust the text shadow
     // Add any other CSS properties you want to style the h1 element
   };
 
