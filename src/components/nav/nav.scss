@@ -140,4 +140,28 @@
     display: block;
   }
   
+  .dropdown-container {
+    position: absolute;
+    top: 100%; /* Position it below the menu item */
+    right: 0; /* Adjust as needed to align it with the menu item */
+    background-color: #fff; /* Background color */
+    border: 1px solid #ccc; /* Border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
+    z-index: 1; /* Ensure it appears above other content */
   
+    .dropdown-content {
+      padding: 10px; /* Add padding inside the container */
+  
+      a {
+        display: block;
+        margin: 8px 0; /* Add spacing between links */
+        color: #333; /* Text color */
+        text-decoration: none;
+        transition: color 0.3s;
+  
+        &:hover {
+          color: #007BFF; /* Change text color on hover */
+        }
+      }
+    }
+  }

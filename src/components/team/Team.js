@@ -31,13 +31,18 @@ const Team = () => {
 
   // Style for the animated h1 element
   const h1Style = {
-    fontSize: "1.7rem", // Adjust the font size
+    fontSize: ".8rem", // Adjust the font size for mobile devices
     color: "white",
     textAlign: "center",
     textShadow: "0 0 2px black",
-    marginBottom: "50px" // Adjust the text shadow
+    marginBottom: "50px", // Adjust the text shadow
     // Add any other CSS properties you want to style the h1 element
   };
+
+  // Media query for mobile screens (e.g., screens up to 768px wide)
+  if (window.innerWidth <= 768) {
+    h1Style.fontSize = "1rem"; // Adjust the font size for smaller screens
+  }
 
   const steps = [
     { name: 'Arturo', subtitle: 'Founder' },

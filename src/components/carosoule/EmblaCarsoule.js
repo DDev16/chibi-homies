@@ -51,11 +51,12 @@ const EmblaCarousel = ({ slides }) => {
 
   // Style for the animated h1 element
   const h1Style = {
-    fontSize: "2rem", // Adjust the font size
+    fontSize: "1.5rem", // Adjust the font size
     color: "white",
+    marginTop:'50px',
     textAlign: "center",
     textShadow: "0 0 10px #007bff", 
-    marginBottom:"350px"// Adjust the text shadow
+    marginBottom:"100px"// Adjust the text shadow
     // Add any other CSS properties you want to style the h1 element
   };
 

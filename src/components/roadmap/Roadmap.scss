@@ -2,11 +2,12 @@
 .roadmap {
     text-align: center;
     padding: 40px 0;
+    
   }
   
   /* Roadmap title */
   .roadmap-title {
-    font-size: 204px;
+    font-size: 154px;
     font-weight: bold;
     margin-bottom: 20px;
     color: #ffffff;
@@ -42,6 +43,10 @@
     transition: opacity 0.5s ease, transform 0.5s ease;
     color: #fff; /* Set text color to white for better visibility */
   }
+
+
+
+  
   
   /* Event title */
   .event-title {
@@ -53,7 +58,7 @@
   
   /* Event description */
   .event-description {
-    font-size: 44px;
+    font-size: 34px;
     font-family: Arial, Helvetica, sans-serif;
     color: #fff; /* Set text color to white for better visibility */
   }
@@ -82,3 +87,13 @@
     z-index: -1; /* Place background behind event content */
   }
   
+
+  @media (max-width: 768px) {
+
+    .roadmap-title {
+      font-size: 104px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+}

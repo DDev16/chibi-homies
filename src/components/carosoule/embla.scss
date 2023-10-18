@@ -37,8 +37,7 @@
   padding-left: 0px;
   min-width: 40%;
   position: relative;
-  box-shadow: 0 20px 120px #007bff;
-  border-radius: 20px;
+  // box-shadow: 0 20px 120px #ff00dd;
 
 
 }
@@ -65,9 +64,8 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: 20px;
 
-  box-shadow: 0 0 120px #007bff;
+  // box-shadow: 0 0 120px #007bff;
 
   
   transition: transform 0.3s ease-in-out; // Add a transition for smooth movement
@@ -98,8 +96,9 @@
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 
   h3 {
+    margin-top: 30px;
     margin: 0;
-    font-size: 68px;
+    font-size: 88px;
     margin-bottom: 5px;
     text-align: center; /* Center-align the text horizontally */
   }
@@ -122,6 +121,55 @@
   .embla__slide {
     padding-left: 10px;
     min-width: 100%;
+   
+  }
+
+  
+
+  
+}
+
+
+@media (max-width: 768px) {
+  .embla__slide__caption {
+    position: absolute;
+    bottom: 10px; /* Adjust the position as needed for mobile */
+    left: 10px; /* Adjust the position as needed for mobile */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+    color: #fff;
+    padding: 10px;
+    height: auto; /* Adjust height for mobile */
+    border-radius: 5px;
+    opacity: 1; /* Set to 1 for mobile, so the caption is always visible */
+    transform: translateY(0); /* Slide up when hovered (remove hover effect) */
+    transition: none; /* Remove transitions for mobile */
+  }
+
+  /* embla-carousel-description.scss */
+
+.embla__slide__caption {
+  p {
+    font-size: 18px;
+    font-family: fantasy;
+    margin-top: 10px; /* Adjust the margin as needed */
+  }
+}
+
+
+  .embla__slide:hover .embla__slide__caption {
+    opacity: 1; /* Keep caption visible on hover for mobile */
+    transform: translateY(0); /* Keep it in position on hover for mobile */
+  }
+
+  h3 {
+    font-size: 32px; /* Adjust the font size for mobile */
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 18px; /* Adjust the font size for mobile */
+    font-family: fantasy;
   }
 }
 /* Keyframes for the animation */
@@ -207,3 +255,23 @@
     right: 27px;
   }
   
+
+  /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
+@media (max-width: 768px) {
+  .embla {
+    padding: 10px; /* Adjust padding for mobile */
+    height: auto; /* Remove fixed height for mobile */
+  }
+
+  .embla__slide {
+    min-width: 100%; /* Occupy full width on mobile */
+  }
+
+  .embla__slide__inner {
+    height: auto; /* Adjust height for mobile */
+  }
+
+  .embla__slide__caption {
+    height: auto; /* Adjust height for mobile */
+  }
+}
