@@ -12,7 +12,8 @@ contract NFTMintingContract is Initializable, UUPSUpgradeable, OwnableUpgradeabl
 
     string public baseURI;
     string public baseExtension;
-    uint256 public cost;
+    uint256 public presaleCost; // Cost during presale
+    uint256 public cost; // Regular cost after presale
     uint256 public maxSupply;
     uint256 public maxMintAmount;
     bool public paused;
@@ -20,6 +21,7 @@ contract NFTMintingContract is Initializable, UUPSUpgradeable, OwnableUpgradeabl
     string public notRevealedUri;
     uint256 public totalProceeds;
     uint256 public rewardPercentage; // Percentage of proceeds to be distributed to NFT holders
+    bool public presaleActive; // Toggle for the presale
 
     mapping(address => uint256) public nftHolderRewards; // Track rewards for NFT holders
     mapping(address => uint256) public ownerWithdrawBalance; // Balance for the contract owner
@@ -38,12 +40,14 @@ contract NFTMintingContract is Initializable, UUPSUpgradeable, OwnableUpgradeabl
         setNotRevealedURI(_initNotRevealedUri);
 
         baseExtension = ".json";
-        cost = 10 ether;
+        presaleCost = 5 ether; // Set the presale cost
+        cost = 10 ether; // Set the regular cost
         maxSupply = 1150;
         maxMintAmount = 100;
         paused = false;
         revealed = true;
         rewardPercentage = _initialRewardPercentage;
+        presaleActive = true; // Presale is initially active
     }
 
     // internal
@@ -51,19 +55,22 @@ contract NFTMintingContract is Initializable, UUPSUpgradeable, OwnableUpgradeabl
         return baseURI;
     }
 
-    // public
-    // public
-// public
-function mint(uint256 _mintAmount) public payable {
+   function mint(uint256 _mintAmount) public payable {
     uint256 supply = totalSupply();
     require(!paused);
     require(_mintAmount > 0);
     require(_mintAmount <= maxMintAmount);
     require(supply + _mintAmount <= maxSupply);
 
-    if (msg.sender != owner()) {
-        require(msg.value >= cost * _mintAmount);
+    uint256 currentCost;
+
+    if (presaleActive && msg.sender != owner()) {
+        currentCost = presaleCost;
+    } else {
+        currentCost = cost;
     }
+
+    require(msg.value >= currentCost * _mintAmount);
 
     for (uint256 i = 1; i <= _mintAmount; i++) {
         _safeMint(msg.sender, supply + i);
@@ -81,6 +88,7 @@ function mint(uint256 _mintAmount) public payable {
 
 
 
+
     function walletOfOwner(address _owner) public view returns (uint256[] memory) {
         uint256 ownerTokenCount = balanceOf(_owner);
         uint256[] memory tokenIds = new uint256[](ownerTokenCount);
@@ -88,6 +96,11 @@ function mint(uint256 _mintAmount) public payable {
             tokenIds[i] = tokenOfOwnerByIndex(_owner, i);
         }
         return tokenIds;
+    }
+
+     // Toggle presale
+    function togglePresale(bool _active) public onlyOwner {
+        presaleActive = _active;
     }
 
     function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
@@ -158,7 +171,7 @@ function mint(uint256 _mintAmount) public payable {
         paused = _state;
     }
 
- 
+
         
     function _authorizeUpgrade(address) internal override onlyOwner {}
 

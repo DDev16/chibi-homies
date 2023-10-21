@@ -38,7 +38,7 @@ class Roadmap extends Component {
           description: 'A mix of Characterized Animals that have all eaten the psycho gems and gone psycho',
         },
         {
-          id: 5,
+          id: 6,
           date: '2024-01-15',
           title: 'Zombie run Blockchain game',
           description: 'A classic game of zombies where you run from hordes of zombies, built in react.js using 3D library Three.js to create immersive metaverse like game.',
